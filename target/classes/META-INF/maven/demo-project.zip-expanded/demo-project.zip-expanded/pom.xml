@@ -1,0 +1,41 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>demo-project.zip-expanded</groupId>
+  <artifactId>demo-project.zip-expanded</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Late March Java Refresh</name>
+  <description>A late March Java Refresher. This project was started to help restore familiarity with with Java, Eclpse, Maven, HTTP, etc.</description>
+  <properties>
+    <java.version>21</java.version>
+  </properties>
+  <dependencies>
+<!--In Eclipse, you can click above 'Add Spring Boot Starters'  ^^(hyperlink)^^  to add depenencies' -->
+<!--Starter for building web, including RESTful applications using Spring MVC. Uses Tomcat as 
+    	default embedded container. -->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+    	<version>3.4.4</version>
+    </dependency>
+<!--Starter for testing Spring Boot applications with libraries including 
+    	JUnit Jupiter, Hamcrest and Mockito -->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-test</artifactId>
+    	<version>3.4.4</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <sourceDirectory>demo-project/src/main/java</sourceDirectory>
+    <testSourceDirectory>demo-project/src/test/java</testSourceDirectory>
+    <plugins>
+      <plugin>   
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>21</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
